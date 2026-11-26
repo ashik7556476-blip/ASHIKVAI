@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | 『 𝐌𝐊 』 𝐓𝐑𝐀𝐃𝐈𝐍𝐆 𝐙𝐎𝐍𝐄</title>
+  <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  <style>
+    body{min-height:100vh;display:grid;place-items:center;background:#0b1020}
+    .login-card{width:min(92vw,420px);border:1px solid rgba(255,255,255,.14);border-radius:18px;background:#151d31;box-shadow:0 18px 55px rgba(0,0,0,.35)}
+  </style>
+</head>
+<body>
+  <main class="login-card p-4 p-md-5">
+    <h3 class="text-center mb-2">『 𝐌𝐊 』 𝐓𝐑𝐀𝐃𝐈𝐍𝐆 𝐙𝐎𝐍𝐄</h3>
+    <p class="text-center text-secondary mb-4">Enter your password to continue</p>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}" role="alert">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+    <form method="post" autocomplete="off">
+      <label class="form-label" for="password">Password</label>
+      <input class="form-control mb-3" id="password" name="password" type="password" placeholder="Enter password" required autofocus>
+      <button class="btn btn-primary w-100" type="submit">Login</button>
+    </form>
+  </main>
+</body>
+</html>
