@@ -1,2 +1,2 @@
-# ASHIKVAI
-『 𝐌𝐊 』 𝐓𝐑𝐀𝐃𝐈𝐍𝐆 𝐙𝐎𝐍𝐄
+# quotex-signal-bot
+Advanced Quotex trading signal bot with 95%+ accuracy using SMC/ICT analysis
